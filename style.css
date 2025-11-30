@@ -1,0 +1,121 @@
+body {
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    background: #0a0a0a;
+    font-family:'Arial', sans-serif;
+    overflow:hidden;
+}
+
+#gameContainer {
+    position:relative;
+}
+
+.title {
+    color:#0ff;
+    text-align:center;
+    text-shadow:0 0 10px #0ff;
+    margin-bottom:20px;
+}
+
+.neonBtn {
+    background:none;
+    color:#0ff;
+    border:2px solid #0ff;
+    padding:10px 30px;
+    font-size:20px;
+    text-shadow:0 0 5px #0ff,0 0 10px #0ff;
+    cursor:pointer;
+    transition:0.2s;
+    display:block;
+    margin:10px auto;
+}
+
+.neonBtn:hover {
+    transform:scale(1.1);
+    text-shadow:0 0 10px #0ff,0 0 20px #0ff;
+}
+
+.neonBtn:active {
+    transform:scale(0.95);
+}
+
+#gameCanvas {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%); /* 정확히 화면 가운데 배치 */
+}
+
+#startBtn {
+    position: relative; /* menu 안이므로 relative로 충분 */
+    z-index: 10;
+}
+
+#upgradeScreen {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 100; /* 항상 canvas 위 */
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+#restartBtn {
+    position: fixed;       /* 화면 기준으로 위치 */
+    top: 70%;              /* 화면 세로 70% 위치 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    display: none;
+    background-color: #ff0066;
+    color: #000000;
+    border: 2px solid #ff5555;
+    padding: 10px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    text-shadow: 0 0 5px #ff5555, 0 0 10px #ff5555;
+    transition: 0.2s;
+}
+
+
+#restartBtn:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    text-shadow: 0 0 10px #ff5555, 0 0 20px #ff5555;
+}
+
+#restartBtn:active {
+    transform: translate(-50%, -50%) scale(0.95);
+}
+
+.upgradeOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #0ff;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px;
+}
+
+.upgradeOption p {
+    margin-top: 10px;
+    max-width: 150px;
+}
+
+.upgradeIcon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 5px #0ff);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>탄막 게임</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu">
+    <h1 class="title">탄막 게임</h1>
+    <button id="startBtn" class="neonBtn">게임 시작</button>
+</div>
+
+<div id="gameScreen" style="display:none; position:relative;">
+    <div id="gameContainer">
+      <canvas id="bgCanvas"></canvas>
+      <canvas id="gameCanvas" width="600" height="800"></canvas>
+      <button id="restartBtn" class="neonBtn" style="display:none;">재시작</button>
+    </div>
+</div>
+
+<!-- 업그레이드 선택 화면 -->
+<div id="upgradeScreen" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:100; justify-content:space-around; align-items:center; flex-direction:row;">
+    <div class="upgradeOption">
+        <img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" alt="Speed Boost" class="upgradeIcon">
+        <button id="upgradeLeft" class="neonBtn">스피드 부스트</button>
+        <p>플레이어 속도 +1</p>
+    </div>
+    <div class="upgradeOption">
+        <img src="https://cdn-icons-png.flaticon.com/512/271/271210.png" alt="Bullet Accelerator" class="upgradeIcon">
+        <button id="upgradeRight" class="neonBtn">총알의 분노</button>
+        <p>총알 속도 +2</p>
+        <p>게이지 속도 +2</p>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
